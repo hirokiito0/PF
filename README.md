@@ -1,24 +1,33 @@
-# README
+# <Let's!! PartyGames>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+<Let's!! PartyGamesでは様々なボードゲームについて情報を共有するサイトです。パーティを盛り上げたいとき、小さな子供と一緒に遊びたい時など、楽しいボードゲームの情報をお届けします。>
 
-Things you may want to cover:
+### サイトテーマ
+<みんなで楽しめるボードゲームについて共有しよう！>
 
-* Ruby version
+### テーマを選んだ理由
+<趣味がボードゲームで自分でも知らないゲームがたくさんあることから自分のおすすめについて共有し、いろんなゲームの情報を知りたいから>
 
-* System dependencies
+### ターゲットユーザ
+<ボードゲームが趣味の人、パーティで盛り上げたい人、小さな子供と一緒に遊びたい人>
 
-* Configuration
+### 主な利用シーン
+<新しいボードゲームの情報が欲しい時、子供と一緒に遊ぶのに最適なボードゲームを知りたい時、盛り上がるゲームを知りたい時>
 
-* Database creation
+## 設計書
+<...>
 
-* Database initialization
+## チャレンジ要素一覧
+<https://docs.google.com/spreadsheets/d/16tldq1dqGgxi3ngyheHgnR1xy7gDgAsDOPrmnRx2u0I/edit?usp=sharing>
 
-* How to run the test suite
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
+- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
+- 使用しない場合は、使用素材の項目をREADMEから削除してください。
