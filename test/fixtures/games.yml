@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 1
+  game_title: MyString
+  game_introduction: MyText
+  recommended: MyText
+  game_image: MyString
+  prise: 1
+
+two:
+  customer_id: 1
+  game_title: MyString
+  game_introduction: MyText
+  recommended: MyText
+  game_image: MyString
+  prise: 1
