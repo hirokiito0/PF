@@ -1,2 +1,49 @@
-<h1>Customer::Games#new</h1>
-<p>Find me in app/views/customer/games/new.html.erb</p>
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-6 px-5 px-sm-0 mx-auto">
+      <h1>ゲーム新規投稿</h1>
+      <%= form_with model: @game, url: customer_games_path , local:true do |game| %>
+      <table class="table-inverse">
+        <tbody>
+
+          <tr height="50">
+            <th width=150>画像</th>
+            <th><%= game.attachment_field :game_image %></th>
+          </tr>
+
+          <tr height="50">
+            <th>ゲームタイトル</th>
+            <th><%= game.text_field :game_title, size: "40x20", placeholder:"タイトル"%></th>
+          </tr>
+
+          <tr height="50">
+            <th>紹介文</th>
+            <th><%= game.text_area :game_introduction, size: "40x5", placeholder:"ここに紹介文を記述します" %></th>
+          </tr>
+
+          <tr height="50">
+            <th>お勧めする点</th>
+            <th><%= game.text_area :recommended, size: "40x5", placeholder:"お勧めする点を記載してください" %></th>
+          </tr>
+
+          <!--<tr height="50">-->
+          <!--  <th>タグ</th>-->
+          <!--  <th>-->
+          <!--    <%#= f.collection_select:genre_id, Genre.all, :id, :name,include_blank: "選択して下さい"%>-->
+          <!--  </th>-->
+          <!--</tr>-->
+
+          <tr height="50">
+            <th>税抜価格</th>
+            <th><%= game.text_field :price, size: "40x20",placeholder:"1000" %><label>円</label></th>
+          </tr>
+
+        </tbody>
+      </table>
+        <p class="text-center">
+          <%= game.submit'新規投稿', :class=>"button"%>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>
