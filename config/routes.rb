@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :customer do
+    get 'customers/show'
+    get 'customers/edit'
+  end
   namespace :admin do
     get 'customers/index'
     get 'customers/show'
@@ -16,13 +20,13 @@ Rails.application.routes.draw do
   }
 
   root "customer/homes#top"
-  
+
   namespace :admin do
     resources :games
   end
-  
+
   namespace :customer do
     resources :games
   end
-  
+
 end

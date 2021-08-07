@@ -14,8 +14,11 @@ class Customer::GamesController < ApplicationController
   def create
     @game         = Game.new(games_params)
     @game.user_id = current_user.id
-    @game.save
-    redirect_to customer_games_path
+    if @game.save
+      redirect_to customer_games_path
+    else
+      redirect_to new_customer_game_path
+    end
   end
   
   def destroy
