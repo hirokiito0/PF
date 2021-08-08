@@ -8,14 +8,14 @@
       <div class = "collapse navbar-collapse" id = "navbarNavDropdown">
         <ul class = "navbar-nav ml-auto">
         <% if admin_signed_in? %>
-          <li><div class = "ml-5" ><%= link_to ' ゲーム一覧',     '',     class: "btn btn-outline-dark" %></div></li>
-          <li><div class = "ml-5" ><%= link_to ' 会員一覧 ',    '#', class: "btn btn-outline-dark" %></div></li>
-          <li><div class = "ml-5" ><%= link_to ' ジャンル一覧', '#',    class: "btn btn-outline-dark" %></div></li>
-          <li><div class = "ml-5" ><%= link_to ' ログアウト',   destroy_admin_session_path, method: :delete,class: "btn btn-outline-dark" %></div></li>
+          <li><div class = "ml-5" ><%= link_to ' ゲーム一覧',   admin_games_path, class: "btn btn-outline-dark" %></div></li>
+          <li><div class = "ml-5" ><%= link_to ' 会員一覧 ',    admin_customers_path, class: "btn btn-outline-dark" %></div></li>
+          <li><div class = "ml-5" ><%= link_to ' タグ一覧', '#',    class: "btn btn-outline-dark" %></div></li>
+          <li><div class = "ml-5" ><%= link_to ' ログアウト',   destroy_admin_session_path,class: "btn btn-outline-dark",method: :delete %></div></li>
         <% elsif customer_signed_in? %>
-          <li><div class = "ml-5" ><%= link_to ' ゲーム一覧',  '#', class:"btn btn-outline-dark" %></div></li>
-          <li><div class = "ml-5" ><%= link_to ' マイページ',  '#',   class: "btn btn-outline-dark" %></div></li>
-          <li><div class = "ml-5" ><%= link_to ' ログアウト',   destroy_customer_session_path, method: :delete,class: "btn btn-outline-dark" %></div></li>
+          <li><div class = "ml-5" ><%= link_to ' ゲーム一覧',   customer_games_path,                            class: "btn btn-outline-dark" %></div></li>
+          <li><div class = "ml-5" ><%= link_to ' マイページ',   "customers/#{current_customer.id}", class: "btn btn-outline-dark" %></div></li>
+          <li><div class = "ml-5" ><%= link_to ' ログアウト',   destroy_customer_session_path,                  class: "btn btn-outline-dark", method: :delete %></div></li>
         <% else %>
           <li><div class = "ml-5" ><%= link_to ' 新規登録',     new_customer_registration_path, class: "btn btn-outline-dark" %></div></li>
           <li><div class = "ml-5" ><%= link_to ' ログイン',     new_customer_session_path ,     class: "btn btn-outline-dark" %></div></li>

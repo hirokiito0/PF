@@ -1,2 +1,24 @@
-<h1>Customer::Customers#edit</h1>
-<p>Find me in app/views/customer/customers/edit.html.erb</p>
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+    <h2>会員編集画面</h2>
+    <%= form_with model:@customer, local:true do |customer| %>
+      <%= render 'layouts/errors', obj: @user %>
+      <div class="form-group">
+        <%= customer.label :name %>
+        <%= customer.text_field :name, class: "form-control name" %>
+      </div>
+     <div class="form-group">
+        <%= customer.label :image %>
+        <%#= customer.attachment_field :profile_image, class: "form-control-file user_image" %>
+      </div>
+      <div class="form-group">
+        <%= customer.label :introduction %>
+        <%= customer.text_area :introduction, class: "form-control introduction" %>
+      </div>
+      <div class="form-group">
+        <%= f.submit class: 'btn btn-secondary' %>
+      </div>
+    <% end %>
+  </div>
+</div>
